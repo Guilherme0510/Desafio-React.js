@@ -1,0 +1,6 @@
+Desafio Click Soft
+
+Objetivo - Criar um sistema para fazer uma busca de pessoas através do GitHub em que apareça sua foto, nome, login e a sua localização
+
+Passo 1- Criar uma tela de busca de pessoas
+Passo 2 - 

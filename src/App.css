@@ -1,38 +1,238 @@
-.App {
+.titulo {
+  color: #fff;
   text-align: center;
+  margin-bottom: -60px;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161F30;
+  height: 600px;
+  width: 70%;
+  border-radius: 30px;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buscador .btn-buscar {
+  background-color: #D9D9D9;
+  width: 200px;
+  height: 60px;
+  font-size: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+
+.buscador .btn-buscar:hover {
+  margin-top: -7px;
+  margin-left: -5px;
+  scale: 1.02;
+  background-color: #979797;
+}
+
+.ocultar-busca {
+  width: 170px !important;
+  height: 50px !important;
+  font-size: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red !important;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input-pesquisa {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 35px;
+}
+
+.input-pesquisa input {
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  margin-inline: 10px;
+  margin-block: -10px;
+}
+
+.input-pesquisa .btn-pesquisa {
+  background: #0a4dc9;
+  width: auto;
+  padding-inline: 20px;
+  height: auto;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+
+.input-pesquisa .btn-pesquisa:hover {
+  background: #062c74;
+  padding-block: 7px;
+  margin-top: -7px;
+  color: #fff;
+  margin-left: 10px;
+  scale: 1.02;
+  letter-spacing: 1px;
+}
+
+.secao-buscar {
+  width: 70%;
+  height: 70%;
+  background: #D9D9D999;
+  border-radius: 30px 0 0 30px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  overflow-y: scroll;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.secao-buscar img {
+  width: 150px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.secao-buscar h3,
+.secao-buscar h4,
+.secao-buscar small,
+.secao-buscar p {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.secao-buscar .repositorio-lista {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.secao-buscar .title-repositorios {
+  margin-top: 50px;
+}
+
+.secao-buscar li {
+  margin-top: 20px;
+  margin-left: -40px;
+  list-style: none;
+}
+
+.menu-recentes {
+  background-color: #9ebbf0;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 300px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+.menu-recentes h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.menu-recentes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.menu-recentes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.menu-recentes li:hover {
+  background-color: #0a4dc9;
+}
+
+.menu-recentes img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.menu-recentes .user-info {
+  color: #fff;
+  font-size: 14px;
+}
+
+.menu-recentes .user-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menu-recentes .user-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+@media screen and (max-width: 992px) {
+  .input-pesquisa {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-pesquisa input {
+    width: 200px !important;
+  }
+
+  .input-pesquisa .btn-pesquisa {
+    margin-top: 15px;
+    width: 40% !important;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .secao-buscar {
+    height: 63%;
+    border-radius: 30px;
+  }
+
+  .menu-recentes {
+    right: 20px;
+    top: 80px;
+    width: 80%;
+    max-width: none;
   }
 }
