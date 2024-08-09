@@ -28,7 +28,7 @@ const App = () => {
         });
       })
       .catch(error => {
-        console.error("Erro ao buscar o perfil:", error);
+        alert("Erro ao buscar o perfil");
         setPerfilData(null);
       });
   };
@@ -43,7 +43,7 @@ const App = () => {
           });
       })
       .catch(error => {
-        console.error("Erro ao carregar o perfil completo:", error);
+        alert("Erro ao carregar o perfil completo");
       });
   };
 
